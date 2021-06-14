@@ -16,7 +16,7 @@
         <el-table :data="userData" style="width: 100%" border stripe>
           <el-table-column prop="id" label="ID" width="60"> </el-table-column>
           <el-table-column label="头像" width="80">
-            <template scope="scope">
+            <template slot-scope="scope">
               <img
                 :src="scope.row.avatar"
                 alt=""
@@ -30,7 +30,7 @@
             label="昵称"
           ></el-table-column>
           <el-table-column prop="name" width="110" label="姓名">
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-input
                 size="mini"
                 v-model="scope.row.name"
@@ -40,7 +40,7 @@
             </template>
           </el-table-column>
           <el-table-column prop="name" width="160" label="手机">
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-input
                 size="mini"
                 v-model="scope.row.mobile"
@@ -50,7 +50,7 @@
             </template>
           </el-table-column>
           <el-table-column prop="gender" label="性别" width="60">
-            <template scope="scope">
+            <template slot-scope="scope">
               {{ scope.row.gender == 2 ? "女" : "男" }}
             </template>
           </el-table-column>
@@ -186,7 +186,7 @@
             width="100px"
           ></el-table-column>
           <el-table-column prop="list_pic_url" label="图片" width="70px">
-            <template scope="scope">
+            <template slot-scope="scope">
               <img
                 :src="scope.row.list_pic_url"
                 alt=""
@@ -207,7 +207,7 @@
           <el-table-column prop="retail_price" label="成交价"></el-table-column>
           <el-table-column prop="add_time" label="加入时间"></el-table-column>
           <el-table-column prop="is_delete" label="是否删除">
-            <template scope="scope">
+            <template slot-scope="scope">
               <label>{{ scope.row.is_delete == 1 ? "已删" : "" }}</label>
             </template>
           </el-table-column>
@@ -221,7 +221,7 @@
             width="100px"
           ></el-table-column>
           <el-table-column prop="list_pic_url" label="图片" width="70px">
-            <template scope="scope">
+            <template slot-scope="scope">
               <img
                 :src="scope.row.list_pic_url"
                 alt=""

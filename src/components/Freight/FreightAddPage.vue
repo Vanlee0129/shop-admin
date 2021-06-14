@@ -65,7 +65,7 @@
                   prop="start"
                   :label="infoForm.freight_type == 0 ? '首件(个)' : '首重(KG)'"
                 >
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-input
                       size="mini"
                       v-model="scope.row.start"
@@ -76,7 +76,7 @@
                   </template>
                 </el-table-column>
                 <el-table-column prop="start_fee" label="运费(元)">
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-input
                       size="mini"
                       v-model="scope.row.start_fee"
@@ -89,7 +89,7 @@
                   prop="add"
                   :label="infoForm.freight_type == 0 ? '续件(个)' : '续重(KG)'"
                 >
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-input
                       size="mini"
                       v-model="scope.row.add"
@@ -99,7 +99,7 @@
                   </template>
                 </el-table-column>
                 <el-table-column prop="add_fee" label="运费(元)">
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-input
                       size="mini"
                       v-model="scope.row.add_fee"
@@ -113,7 +113,7 @@
                   label="按件包邮"
                   width="140"
                 >
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-switch
                       v-if="scope.row.free_by_number == 0"
                       v-model="scope.row.freeByNumber"
@@ -152,7 +152,7 @@
                   label="按金额包邮"
                   width="140"
                 >
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-switch
                       v-if="scope.row.free_by_money == 0"
                       v-model="scope.row.freeByMoney"
@@ -201,7 +201,7 @@
                   :label="infoForm.freight_type == 0 ? '首件(个)' : '首重(KG)'"
                   width="90"
                 >
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-input
                       size="mini"
                       v-model="scope.row.start"
@@ -212,7 +212,7 @@
                   </template>
                 </el-table-column>
                 <el-table-column prop="start_fee" label="运费(元)" width="90">
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-input
                       size="mini"
                       v-model="scope.row.start_fee"
@@ -226,7 +226,7 @@
                   :label="infoForm.freight_type == 0 ? '续件(个)' : '续重(KG)'"
                   width="90"
                 >
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-input
                       size="mini"
                       v-model="scope.row.add"
@@ -236,7 +236,7 @@
                   </template>
                 </el-table-column>
                 <el-table-column prop="add_fee" label="运费(元)" width="90">
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-input
                       size="mini"
                       v-model="scope.row.add_fee"
@@ -250,7 +250,7 @@
                   label="按件包邮"
                   width="120"
                 >
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-switch
                       v-if="scope.row.free_by_number == 0"
                       v-model="scope.row.freeByNumber"
@@ -287,7 +287,7 @@
                   label="按金额包邮"
                   width="120"
                 >
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-switch
                       v-if="scope.row.free_by_money == 0"
                       v-model="scope.row.freeByMoney"
@@ -314,7 +314,7 @@
                   </template>
                 </el-table-column>
                 <el-table-column label="操作" width="160">
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-button
                       size="mini"
                       type="primary"

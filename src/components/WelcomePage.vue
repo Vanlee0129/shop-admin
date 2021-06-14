@@ -78,7 +78,7 @@
                   stripe
                 >
                   <el-table-column label="头像" width="80">
-                    <template scope="scope">
+                    <template slot-scope="scope">
                       <img
                         :src="scope.row.avatar"
                         alt=""
@@ -92,7 +92,7 @@
                     width="140"
                   ></el-table-column>
                   <el-table-column prop="gender" label="性别" width="50">
-                    <template scope="scope">
+                    <template slot-scope="scope">
                       {{ scope.row.gender == 2 ? "女" : "男" }}
                     </template>
                   </el-table-column>

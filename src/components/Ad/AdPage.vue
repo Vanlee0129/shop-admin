@@ -15,7 +15,7 @@
         <el-table :data="tableData" style="width: 100%" border stripe>
           <el-table-column prop="id" label="ID" width="70px"></el-table-column>
           <el-table-column prop="image_url" label="广告">
-            <template scope="scope">
+            <template slot-scope="scope">
               <img
                 :src="scope.row.image_url"
                 alt=""
@@ -26,7 +26,7 @@
           <el-table-column prop="goods_id" label="关联商品"></el-table-column>
           <el-table-column prop="end_time" label="结束时间"></el-table-column>
           <el-table-column prop="sort_order" label="排序" width="100" sortable>
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-input
                 v-model="scope.row.sort_order"
                 placeholder="排序"
@@ -35,12 +35,12 @@
             </template>
           </el-table-column>
           <el-table-column prop="enabled" label="状态" width="80px">
-            <template scope="scope">
+            <template slot-scope="scope">
               {{ scope.row.enabled == 1 ? "启用" : "禁用" }}
             </template>
           </el-table-column>
           <el-table-column label="开启状态" width="80">
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-switch
                 v-model="scope.row.enabled"
                 active-text=""
@@ -51,7 +51,7 @@
             </template>
           </el-table-column>
           <el-table-column label="操作" width="170">
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-button
                 size="small"
                 @click="handleRowEdit(scope.$index, scope.row)"

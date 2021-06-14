@@ -76,7 +76,7 @@
                   label="商品图片"
                   width="120"
                 >
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <img
                       :src="scope.row.list_pic_url"
                       alt=""
@@ -90,7 +90,7 @@
                   width="300px"
                 ></el-table-column>
                 <el-table-column label="操作">
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-button
                       size="small"
                       type="danger"

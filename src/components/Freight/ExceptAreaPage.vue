@@ -32,7 +32,7 @@
             ></el-table-column>
             <el-table-column prop="areaName" label="偏远地区"></el-table-column>
             <el-table-column label="操作" width="200">
-              <template scope="scope">
+              <template slot-scope="scope">
                 <el-button
                   type="primary"
                   size="small"

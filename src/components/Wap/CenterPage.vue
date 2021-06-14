@@ -27,7 +27,7 @@
       <div class="form-table-box">
         <el-table :data="tableData" style="width: 100%" stripe>
           <el-table-column prop="list_pic_url" label="图片" width="80">
-            <template scope="scope">
+            <template slot-scope="scope">
               <img
                 :src="scope.row.list_pic_url"
                 alt=""
@@ -37,7 +37,7 @@
           </el-table-column>
           <el-table-column prop="name" label="商品名称"> </el-table-column>
           <el-table-column prop="retail_price" label="售价" width="90" sortable>
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-input
                 v-model="scope.row.retail_price"
                 placeholder="售价"
@@ -46,7 +46,7 @@
             </template>
           </el-table-column>
           <el-table-column label="上架" width="60">
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-switch
                 v-model="tableData[scope.$index].is_on_sale"
                 active-text=""

@@ -35,7 +35,7 @@
           <el-table-column prop="code" label="代号"> </el-table-column>
           <el-table-column prop="sort_order" label="排序"> </el-table-column>
           <el-table-column label="操作" width="170">
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-button
                 size="small"
                 @click="handleRowEdit(scope.$index, scope.row)"

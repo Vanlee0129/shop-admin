@@ -40,7 +40,7 @@
           <el-table-column prop="sort_order" label="排序" width="80">
           </el-table-column>
           <el-table-column label="操作" width="140">
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-button
                 size="small"
                 @click="handleRowEdit(scope.$index, scope.row)"

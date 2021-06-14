@@ -48,7 +48,7 @@
                 width="100"
               ></el-table-column>
               <el-table-column prop="avatar" label="头像" width="80">
-                <template scope="scope">
+                <template slot-scope="scope">
                   <img
                     :src="scope.row.avatar"
                     alt=""
@@ -76,7 +76,7 @@
                 width="300"
               ></el-table-column>
               <el-table-column label="操作">
-                <template scope="scope">
+                <template slot-scope="scope">
                   <el-button
                     size="small"
                     @click="addressEdit(scope.$index, scope.row)"
@@ -99,7 +99,7 @@
               ></el-table-column>
               <el-table-column prop="list_pic_url" label="商品图" width="120"
                 >list_pic_url
-                <template scope="scope">
+                <template slot-scope="scope">
                   <img
                     :src="scope.row.list_pic_url"
                     alt=""
@@ -127,12 +127,12 @@
                 width="100"
               ></el-table-column>
               <el-table-column label="小计" width="100">
-                <template scope="scope">
+                <template slot-scope="scope">
                   <label>{{ scope.row.retail_price * scope.row.number }}</label>
                 </template>
               </el-table-column>
               <el-table-column label="操作">
-                <template scope="scope">
+                <template slot-scope="scope">
                   <el-button
                     size="small"
                     @click="goodsListEdit(scope.$index, scope.row)"
@@ -310,7 +310,7 @@
         </el-form-item>
         <el-form-item label="商品图:" label-width="120px">
           <!-- eslint-disable-next-line vue/no-unused-vars -->
-          <template scope="scope">
+          <template slot-scope="scope">
             <img
               :src="goodsData.list_pic_url"
               alt=""

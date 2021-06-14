@@ -80,7 +80,7 @@
                 label="月结账号"
               ></el-table-column>
               <el-table-column label="操作" width="170">
-                <template scope="scope">
+                <template slot-scope="scope">
                   <el-button
                     size="small"
                     @click="handleRowEdit(scope.$index, scope.row)"

@@ -27,7 +27,7 @@
           stripe
         >
           <el-table-column prop="name" label="分类名称">
-            <template scope="scope">
+            <template slot-scope="scope">
               <div v-if="scope.row.level == 1" class="bg-gray">
                 {{ scope.row.name }}
               </div>
@@ -38,7 +38,7 @@
             </template>
           </el-table-column>
           <el-table-column label="图标显示" width="80">
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-switch
                 v-model="scope.row.is_channel"
                 active-text=""
@@ -49,7 +49,7 @@
             </template>
           </el-table-column>
           <el-table-column label="首页显示" width="80">
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-switch
                 v-model="scope.row.is_show"
                 active-text=""
@@ -60,7 +60,7 @@
             </template>
           </el-table-column>
           <el-table-column label="全部产品页面显示" width="140">
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-switch
                 v-model="scope.row.is_category"
                 active-text=""
@@ -72,7 +72,7 @@
           </el-table-column>
 
           <el-table-column prop="sort_order" label="排序" width="100" sortable>
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-input
                 v-model="scope.row.sort_order"
                 placeholder="排序"
@@ -82,7 +82,7 @@
           </el-table-column>
 
           <el-table-column label="操作" width="300">
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-button
                 size="small"
                 @click="handleRowEdit(scope.$index, scope.row)"
@@ -109,7 +109,7 @@
           <el-table-column prop="sort_order" label="排序" width="200">
           </el-table-column>
           <el-table-column label="操作" width="160">
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-button size="small" @click="specEdit(scope.$index, scope.row)"
                 >编辑</el-button
               >

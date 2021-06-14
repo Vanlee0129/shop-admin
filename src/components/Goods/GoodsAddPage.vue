@@ -166,7 +166,7 @@
             <div class="spec-wrap">
               <el-table :data="specData" stripe style="width: 100%">
                 <el-table-column prop="goods_sn" label="商品SKU" width="140">
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-input
                       @blur="checkSkuOnly(scope.$index, scope.row)"
                       size="mini"
@@ -180,7 +180,7 @@
                   label="快递单上的简称"
                   width="160"
                 >
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-input
                       size="mini"
                       v-model="scope.row.goods_name"
@@ -189,7 +189,7 @@
                   </template>
                 </el-table-column>
                 <el-table-column prop="value" label="型号/规格" width="130">
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-input
                       size="mini"
                       v-model="scope.row.value"
@@ -198,7 +198,7 @@
                   </template>
                 </el-table-column>
                 <el-table-column prop="cost" label="成本(元)" width="100">
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-input
                       size="mini"
                       v-model="scope.row.cost"
@@ -211,7 +211,7 @@
                   label="零售(元)"
                   width="100"
                 >
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-input
                       size="mini"
                       v-model="scope.row.retail_price"
@@ -224,7 +224,7 @@
                   label="重量(KG)"
                   width="100"
                 >
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-input
                       size="mini"
                       v-model="scope.row.goods_weight"
@@ -233,7 +233,7 @@
                   </template>
                 </el-table-column>
                 <el-table-column prop="goods_number" label="库存" width="100">
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-input
                       size="mini"
                       v-model="scope.row.goods_number"
@@ -242,7 +242,7 @@
                   </template>
                 </el-table-column>
                 <el-table-column label="操作" width="70">
-                  <template scope="scope">
+                  <template slot-scope="scope">
                     <el-button
                       size="mini"
                       type="danger"
