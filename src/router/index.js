@@ -8,6 +8,7 @@ const router = new Router({
     {
       path: "/dashboard",
       name: "dashboard",
+      redirect: "/dashboard/welcome",
       component: () => import("@/components/DashboardPage"),
       children: [
         {
